@@ -28,7 +28,7 @@ To practice, we'll be using the `nycflights13` dataset. In this dataset, the yea
 
 ``` r
 library(nycflights13)
-knitr::kable(flights[1:20,])
+knitr::kable(flights[1:10,])
 ```
 
 |  year|  month|  day|  dep\_time|  sched\_dep\_time|  dep\_delay|  arr\_time|  sched\_arr\_time|  arr\_delay| carrier |  flight| tailnum | origin | dest |  air\_time|  distance|  hour|  minute| time\_hour          |
@@ -43,16 +43,6 @@ knitr::kable(flights[1:20,])
 |  2013|      1|    1|        557|               600|          -3|        709|               723|         -14| EV      |    5708| N829AS  | LGA    | IAD  |         53|       229|     6|       0| 2013-01-01 06:00:00 |
 |  2013|      1|    1|        557|               600|          -3|        838|               846|          -8| B6      |      79| N593JB  | JFK    | MCO  |        140|       944|     6|       0| 2013-01-01 06:00:00 |
 |  2013|      1|    1|        558|               600|          -2|        753|               745|           8| AA      |     301| N3ALAA  | LGA    | ORD  |        138|       733|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        558|               600|          -2|        849|               851|          -2| B6      |      49| N793JB  | JFK    | PBI  |        149|      1028|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        558|               600|          -2|        853|               856|          -3| B6      |      71| N657JB  | JFK    | TPA  |        158|      1005|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        558|               600|          -2|        924|               917|           7| UA      |     194| N29129  | JFK    | LAX  |        345|      2475|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        558|               600|          -2|        923|               937|         -14| UA      |    1124| N53441  | EWR    | SFO  |        361|      2565|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        559|               600|          -1|        941|               910|          31| AA      |     707| N3DUAA  | LGA    | DFW  |        257|      1389|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        559|               559|           0|        702|               706|          -4| B6      |    1806| N708JB  | JFK    | BOS  |         44|       187|     5|      59| 2013-01-01 05:00:00 |
-|  2013|      1|    1|        559|               600|          -1|        854|               902|          -8| UA      |    1187| N76515  | EWR    | LAS  |        337|      2227|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        600|               600|           0|        851|               858|          -7| B6      |     371| N595JB  | LGA    | FLL  |        152|      1076|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        600|               600|           0|        837|               825|          12| MQ      |    4650| N542MQ  | LGA    | ATL  |        134|       762|     6|       0| 2013-01-01 06:00:00 |
-|  2013|      1|    1|        601|               600|           1|        844|               850|          -6| B6      |     343| N644JB  | EWR    | PBI  |        147|      1023|     6|       0| 2013-01-01 06:00:00 |
 
 ``` r
 flights$full_time <- paste(flights$year, flights$month, sep = "-") %>% paste(flights$day, sep="-") %>% paste(flights$hour, sep=" ") %>% paste(flights$minute, sep=":")
@@ -178,7 +168,8 @@ As we mentioned, there are lots of other packages which can help you wrangle you
 xts
 ---
 
-Documentation: <a href="https://cran.r-project.org/web/packages/xts/xts.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/xts/xts.pdf</a> Vignette:<a href="https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf</a>
+Documentation: <a href="https://cran.r-project.org/web/packages/xts/xts.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/xts/xts.pdf</a>
+Vignette:<a href="https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf</a>
 
 We'll begin with the popular time series package is `xts`. One <a href="http://rstudio-pubs-static.s3.amazonaws.com/288218_117e183e74964557a5da4fc5902fc671.html" target="_blank">tutorial</a> describes `xts` objects as "normal R matrices, but with special powers".
 
@@ -286,7 +277,10 @@ As with other apply functions, you can change the function you would want to use
 lubridate
 ---------
 
-Official site: <a href="https://lubridate.tidyverse.org/" class="uri" target="_blank">https://lubridate.tidyverse.org/</a> Documentation: <a href="https://cran.r-project.org/web/packages/lubridate/lubridate.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/lubridate/lubridate.pdf</a> Vignette: <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html" class="uri" target="_blank">https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html</a> Cheatsheet: <a href="https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_lubridate.pdf" class="uri" target="_blank">https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_lubridate.pdf</a>
+Official site: <a href="https://lubridate.tidyverse.org/" class="uri" target="_blank">https://lubridate.tidyverse.org/</a>
+Documentation: <a href="https://cran.r-project.org/web/packages/lubridate/lubridate.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/lubridate/lubridate.pdf</a>
+Vignette: <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html" class="uri" target="_blank">https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html</a>
+Cheatsheet: <a href="https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_lubridate.pdf" class="uri" target="_blank">https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_lubridate.pdf</a>
 
 The second package we'll go over is `lubridate`, which is part of the `tidyverse` family of packages. Lubridate reads strings as `POSIXct` objects (learn more about it by searchg `?lubridate`). It's great for calculations and for formatting your data.
 
@@ -381,7 +375,8 @@ In addition to `floor_date()`, `lubridate` also has `round_date()`, which allows
 zoo
 ---
 
-Documentation: You can find the <a href="https://cran.r-project.org/web/packages/zoo/zoo.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/zoo/zoo.pdf</a> Vignette: <a href="https://cran.r-project.org/web/packages/zoo/vignettes/zoo-read.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/zoo/vignettes/zoo-read.pdf</a>
+Documentation: You can find the <a href="https://cran.r-project.org/web/packages/zoo/zoo.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/zoo/zoo.pdf</a>
+Vignette: <a href="https://cran.r-project.org/web/packages/zoo/vignettes/zoo-read.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/zoo/vignettes/zoo-read.pdf</a>
 
 The third package we'll talk about is `zoo`, which is especially useful for munging time series data, such as when constructing a <a href="https://en.wikipedia.org/wiki/Moving_average" target="_blank">moving average</a>. You may have noticed when you checked the class of your `xts` that it is also a `zoo` object. This means you can use `zoo` functions on `xts` objects!
 
@@ -483,7 +478,10 @@ knitr::kable(zoo_daily_movingsum[1:15])
 tsibble
 -------
 
-Website: <https://tsibble.tidyverts.org/> Documentation: <https://cran.r-project.org/web/packages/tsibble/tsibble.pdf> Vignette: <https://cran.rstudio.com/web/packages/tsibble/vignettes/intro-tsibble.html> 12/2018 Tutorial: <https://blog.earo.me/2018/12/20/reintro-tsibble/>
+Website: <https://tsibble.tidyverts.org/>
+Documentation: <https://cran.r-project.org/web/packages/tsibble/tsibble.pdf>
+Vignette: <https://cran.rstudio.com/web/packages/tsibble/vignettes/intro-tsibble.html>
+12/2018 Tutorial: <https://blog.earo.me/2018/12/20/reintro-tsibble/>
 
 The last time series package we'll discuss is `tsibble`, which is built on top of `tibble`. `tsibble` is now part of the `tidyverts` package, which you can find out about [here](https://tidyverts.org/).
 
@@ -507,7 +505,7 @@ You can use the tsibble function `fill_gaps()` to fill missing gaps without merg
 
 ``` r
 tsibble_flights_full <- fill_gaps(tsibble_flights, flights = 0)
-knitr::kable(tsibble_flights_full[1:20,])
+knitr::kable(tsibble_flights_full[1:10,])
 ```
 
 | time                |  flights|
@@ -522,16 +520,6 @@ knitr::kable(tsibble_flights_full[1:20,])
 | 2013-01-01 05:22:00 |        0|
 | 2013-01-01 05:23:00 |        0|
 | 2013-01-01 05:24:00 |        0|
-| 2013-01-01 05:25:00 |        0|
-| 2013-01-01 05:26:00 |        0|
-| 2013-01-01 05:27:00 |        0|
-| 2013-01-01 05:28:00 |        0|
-| 2013-01-01 05:29:00 |        1|
-| 2013-01-01 05:30:00 |        0|
-| 2013-01-01 05:31:00 |        0|
-| 2013-01-01 05:32:00 |        0|
-| 2013-01-01 05:33:00 |        0|
-| 2013-01-01 05:34:00 |        0|
 
 `tsibble` also has three different types of moving windows: `slide()`, `tile()`, and `stretch()`, which return lists. You can see a great vizualization of it in the [tsibble tutorial](https://tsibble.tidyverts.org/), under "rolling window animation". For size reasons (there are 525,285 minutes in the dataset), let's use a daily count, rather than a minute-by-minute count.
 
