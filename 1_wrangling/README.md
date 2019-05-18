@@ -1,3 +1,2 @@
-#Date-Time Structure
-
-First, let's talk about the unique featues of date-time structure.
+# Data Wrangling README
+SJMC Time Series Boot Camp - Materials [by Josephine Lukito and Jordan Foley]
