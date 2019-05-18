@@ -117,4 +117,6 @@ plottage
 api_create(plottage, filename = "brexit_articles")
 ```
 
+You can check this plot out here: (<https://plot.ly/~jlukito/6.embed>)\[<https://plot.ly/~jlukito/6.embed>\]{target="\_blank"}
+
 From here, you should be directed to the plotly site, where you can customize the plot further, or get the html/javascript code to upload to your website.
