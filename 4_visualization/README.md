@@ -1,3 +1,1 @@
-#Data Visualization
-
 Finally, we get to data visualization, which can be essential to sharing information about time series data.
