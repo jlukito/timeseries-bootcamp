@@ -169,6 +169,7 @@ xts
 ---
 
 Documentation: <a href="https://cran.r-project.org/web/packages/xts/xts.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/xts/xts.pdf</a>
+
 Vignette:<a href="https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf</a>
 
 We'll begin with the popular time series package is `xts`. One <a href="http://rstudio-pubs-static.s3.amazonaws.com/288218_117e183e74964557a5da4fc5902fc671.html" target="_blank">tutorial</a> describes `xts` objects as "normal R matrices, but with special powers".
@@ -278,8 +279,11 @@ lubridate
 ---------
 
 Official site: <a href="https://lubridate.tidyverse.org/" class="uri" target="_blank">https://lubridate.tidyverse.org/</a>
+
 Documentation: <a href="https://cran.r-project.org/web/packages/lubridate/lubridate.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/lubridate/lubridate.pdf</a>
+
 Vignette: <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html" class="uri" target="_blank">https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html</a>
+
 Cheatsheet: <a href="https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_lubridate.pdf" class="uri" target="_blank">https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_lubridate.pdf</a>
 
 The second package we'll go over is `lubridate`, which is part of the `tidyverse` family of packages. Lubridate reads strings as `POSIXct` objects (learn more about it by searchg `?lubridate`). It's great for calculations and for formatting your data.
@@ -376,6 +380,7 @@ zoo
 ---
 
 Documentation: You can find the <a href="https://cran.r-project.org/web/packages/zoo/zoo.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/zoo/zoo.pdf</a>
+
 Vignette: <a href="https://cran.r-project.org/web/packages/zoo/vignettes/zoo-read.pdf" class="uri" target="_blank">https://cran.r-project.org/web/packages/zoo/vignettes/zoo-read.pdf</a>
 
 The third package we'll talk about is `zoo`, which is especially useful for munging time series data, such as when constructing a <a href="https://en.wikipedia.org/wiki/Moving_average" target="_blank">moving average</a>. You may have noticed when you checked the class of your `xts` that it is also a `zoo` object. This means you can use `zoo` functions on `xts` objects!
@@ -479,8 +484,11 @@ tsibble
 -------
 
 Website: <https://tsibble.tidyverts.org/>
+
 Documentation: <https://cran.r-project.org/web/packages/tsibble/tsibble.pdf>
+
 Vignette: <https://cran.rstudio.com/web/packages/tsibble/vignettes/intro-tsibble.html>
+
 12/2018 Tutorial: <https://blog.earo.me/2018/12/20/reintro-tsibble/>
 
 The last time series package we'll discuss is `tsibble`, which is built on top of `tibble`. `tsibble` is now part of the `tidyverts` package, which you can find out about [here](https://tidyverts.org/).
