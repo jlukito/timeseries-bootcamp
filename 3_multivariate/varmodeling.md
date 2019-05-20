@@ -364,6 +364,7 @@ Wikipedia: <a href="https://en.wikipedia.org/wiki/Granger_causality" class="uri"
 For the `grangertest()` function, your DV will be on the left, and your IV will be on the right. This test will compare whether a model predicting your IV is better with the inclusion of lagged variables of your DV (or whether the lagged variables of your IV do enough).
 
 `grangertest()` in `lmtest` package: <a href="https://rdrr.io/cran/lmtest/man/grangertest.html" class="uri" target="_blank">https://rdrr.io/cran/lmtest/man/grangertest.html</a>
+
 `causality()` in `vars` package: <a href="https://www.rdocumentation.org/packages/vars/versions/1.5-3/topics/causality" class="uri" target="_blank">https://www.rdocumentation.org/packages/vars/versions/1.5-3/topics/causality</a>
 
 ``` r
@@ -445,13 +446,15 @@ The non-cumulative results will not assume a long run effect, and so the effect 
 Orthogonal shocks are a little tricker to explain, but just know that they are important to IRFs. If you'd like to do some more in-depth math reading, I encourage you to visit the following pages: [Link 1](https://blog.stata.com/2016/09/20/structural-vector-autoregression-models/) and [Link 2](https://www.mathworks.com/help/econ/compare-generalized-and-orthogonalized-impulse-response-functions.html)
 
 ``` r
-vars::irf(var_results, impulse = "guardian", response = "timesofindia", n.ahead = 10, cumulative = T, ortho = T) %>% plot()
+vars::irf(var_results, impulse = "guardian", response = "timesofindia", n.ahead = 10, cumulative = T, ortho = T) %>% 
+  plot()
 ```
 
 ![](var_irf_figures/guardian2toi_irfc.png)
 
 ``` r
-vars::irf(var_results, impulse = "guardian", response = "timesofindia", n.ahead = 10, cumulative = F, ortho = T) %>% plot()
+vars::irf(var_results, impulse = "guardian", response = "timesofindia", n.ahead = 10, cumulative = F, ortho = T) %>% 
+  plot()
 ```
 
 ![](var_irf_figures/guardian2toi_irfnc.png)
@@ -463,13 +466,15 @@ Now, the order of the VAR is important because it influences the interpretation 
 In the example below, you'll see an IRF for the reverse relatioship (what does a shock of `timesofindia` do to `guardian`?). Because Times of India is listed as AFTER The Guardian, Times of India cannot shock The Guardian at `t`. Rather, the shock would occur at `t+1`. We can see this in the figure, because time `t` is zero.
 
 ``` r
-vars::irf(var_results, impulse = "timesofindia", response = "guardian", n.ahead = 10, cumulative = F, ortho = T) %>% plot()
+vars::irf(var_results, impulse = "timesofindia", response = "guardian", n.ahead = 10, cumulative = F, ortho = T) %>% 
+  plot()
 ```
 
 ![](var_irf_figures/toi2guardian_irfnc.png)
 
 ``` r
-vars::irf(var_results, impulse = "timesofindia", response = "guardian", n.ahead = 10, cumulative = T, ortho = T) %>% plot()
+vars::irf(var_results, impulse = "timesofindia", response = "guardian", n.ahead = 10, cumulative = T, ortho = T) %>% 
+  plot()
 ```
 
 ![](var_irf_figures/toi2guardian_irfc.png)
