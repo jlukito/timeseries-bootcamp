@@ -1,7 +1,7 @@
 Vector Autoregression with R
 ================
 Josephine Luito
-May 18, 2019
+May 20, 2019
 
 Today, we'll be working with some counts of articles about Brexit. For this exercise, we'll be using the simple Date object to handle the time variable. Our focus will be on constructing a Vector autoregression model. To do this, we will use the following packages: `vars` (the primary package), `tsDyn`, `lmtest`, and `fracdiff`, and `xts`. You should also load our core time series packages (`forecast` and `tseries`), as well as `tidyverse`.
 
