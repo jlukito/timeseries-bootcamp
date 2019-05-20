@@ -45,7 +45,10 @@ knitr::kable(flights[1:10,])
 |  2013|      1|    1|        558|               600|          -2|        753|               745|           8| AA      |     301| N3ALAA  | LGA    | ORD  |        138|       733|     6|       0| 2013-01-01 06:00:00 |
 
 ``` r
-flights$full_time <- paste(flights$year, flights$month, sep = "-") %>% paste(flights$day, sep="-") %>% paste(flights$hour, sep=" ") %>% paste(flights$minute, sep=":")
+flights$full_time <- paste(flights$year, flights$month, sep = "-") %>% 
+    paste(flights$day, sep="-") %>% 
+    paste(flights$hour, sep=" ") %>% 
+    paste(flights$minute, sep=":")
 str(flights)
 ```
 
@@ -83,7 +86,8 @@ str(flights$full_time)
     ##  POSIXct[1:336776], format: "2013-01-01 05:15:00" "2013-01-01 05:29:00" ...
 
 ``` r
-flights_rearranged <- arrange(flights, full_time) #Use rearrange to rearrange your data from the earliest to latest scheduled departure times.
+flights_rearranged <- arrange(flights, full_time) 
+#Use  to rearrange your data from the earliest to latest scheduled departure times.
 ```
 
 Date
@@ -133,7 +137,8 @@ You'll notice that this data has many gaps. This can be common depending on the 
 One way in which you can fill this gap is by merging your data with a sequential index of all the minutes in your time series. All it takes is 3 lines of code!
 
 ``` r
-full_time <- data.frame(time = seq.POSIXt(minutely_flights$time[1], minutely_flights$time[length(minutely_flights$time)], by="min")) #create an index of all minutes
+full_time <- data.frame(time = seq.POSIXt(minutely_flights$time[1], minutely_flights$time[length(minutely_flights$time)], by="min"))
+#create an index of all minutes
 allmin_flights <- merge(full_time, minutely_flights, by = "time", all.x = T) #merge the two data frames
 allmin_flights$flights[is.na(allmin_flights$flights)] <- 0 #fill all <NA>'s with 0
 
@@ -534,7 +539,8 @@ knitr::kable(tsibble_flights_full[1:10,])
 You can create daily data using the `tile()` function, which creates windows without overlapping observations.
 
 ``` r
-tsibble_flights_tile <- tile(tsibble_flights_full$flights, sum, .size = 1440) %>% unlist() %>% matrix() %>% as.data.frame()
+tsibble_flights_tile <- tile(tsibble_flights_full$flights, sum, .size = 1440) %>% 
+    unlist() %>% matrix() %>% as.data.frame()
 knitr::kable(head(tsibble_flights_tile))
 ```
 
