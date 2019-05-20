@@ -448,13 +448,13 @@ Orthogonal shocks are a little tricker to explain, but just know that they are i
 vars::irf(var_results, impulse = "guardian", response = "timesofindia", n.ahead = 10, cumulative = T, ortho = T) %>% plot()
 ```
 
-![](varmodeling_files/figure-markdown_github/irf-1.png)
+![](varmodeling_files/var_irf_figures/guardian2toi_irfc.png)
 
 ``` r
 vars::irf(var_results, impulse = "guardian", response = "timesofindia", n.ahead = 10, cumulative = F, ortho = T) %>% plot()
 ```
 
-![](varmodeling_files/figure-markdown_github/irf-2.png)
+![](varmodeling_files/var_irf_figures/guardian2toi_irfnc.png)
 
 If we look at these two IRFs, we can tell that a shock at t lasts for two time periods (`t+1` and `t+2`). It may still matter at `t+3`, but the shock's relevance to the DV is drastically dimished. By `t+4`, the series has basically leveled off.
 
@@ -466,13 +466,13 @@ In the example below, you'll see an IRF for the reverse relatioship (what does a
 vars::irf(var_results, impulse = "timesofindia", response = "guardian", n.ahead = 10, cumulative = F, ortho = T) %>% plot()
 ```
 
-![](varmodeling_files/figure-markdown_github/exporter-1.png)
+![](varmodeling_files/var_irf_figures/toi2guardian_irfnc.png)
 
 ``` r
 vars::irf(var_results, impulse = "timesofindia", response = "guardian", n.ahead = 10, cumulative = T, ortho = T) %>% plot()
 ```
 
-![](varmodeling_files/figure-markdown_github/exporter-2.png)
+![](varmodeling_files/var_irf_figures/toi2guardian_irfc.png)
 
 Note here a possibly interesting dyamic at time `t+3`. We can't really tease this out further (our VAR only has a lag of 1). However, this does signal to us that we may want to look at more lags in the model, so as to capture later dynamics. Recall that our earlier analysis of the "optimal lag" was mixed--the BIC selected a lag of 1 as the best, but the other Information Criteria recommended larger lag lengths.
 
