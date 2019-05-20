@@ -1,7 +1,7 @@
 Wrangling Datetime Variables in R
 ================
 Josephine Lukito
-May 18, 2019
+May 20, 2019
 
 Date and time information has special properties compared to typical numbers. To handle this, R has several ways of managing "datetime" data (information about just dates is considered "date" data). Datetime information typically follows some structure like the following:
 
