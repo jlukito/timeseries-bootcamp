@@ -1,7 +1,7 @@
 Time Series Data Visualizations
 ================
 Josephine Lukito (<jlukito@wisc.edu>)
-May 18, 2019
+May 20, 2019
 
 And finally... data visualization! We'll be primarily using two packages, the famous `ggplot2` (), and `plotly`, which is used to make interactive plots. If you would like to export that plot, you will need to have a free account with plot.ly. At some point, we will convert our data to `xts` so make sure you have that package downloaded.
 
@@ -84,7 +84,7 @@ ggplot(brexit_melted, aes(x = as.Date(date), y = value, color = variable)) +
   theme(axis.text.x = element_text(angle = 0, hjust = 0), legend.position="bottom") 
 ```
 
-![](visualization_files/figure-markdown_github/plotty-1.png)
+![](brexit_plot.png)
 
 You can save this plot using ggsave (you can get much larger images, with much better DPI, using this rather than any save icon.
 
