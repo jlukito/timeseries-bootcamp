@@ -14,4 +14,4 @@ This dataset contains the following 7 variables:
 4. german: count of articles published by German news outlets in the [MediaCloud collection](https://sources.mediacloud.org/#/collections/34412409) using the word "brxit"
 5. nyt: count of articles published by The New York Times using the word "brexit"
 6. approval: public approval of Brexit
-7. event: significant events, as identified from [Wikipedia](https://en.wikipedia.org/wiki/Brexit#2019)
+7. event: significant Brexit events, as identified from [Wikipedia](https://en.wikipedia.org/wiki/Brexit#2019)
