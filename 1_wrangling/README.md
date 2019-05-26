@@ -7,3 +7,5 @@ In this module, we'll go over how to wrangle date-time data for time series anal
 * **tidy data** - Data that has been wrangled to be [tidy](https://vita.had.co.nz/papers/tidy-data.pdf), where "each variable is a column, each observation is a row, and each type of observational unit is a table." For **Tidy time series data**, each observation should be a unique time point, and all data should be organized chronologically, with no gaps.
   * Not all time series models require regularly spaced data, but the ones we discuss do.
  * **temporal aggregation** - This refers to the process of grouping, or aggregating, data, from smaller time units (e.g., minutes) to larger time units (e.g., hours).
+
+##### For those who want to wrangle data in Python, see [here](https://chrisalbon.com/python/data_wrangling/pandas_group_data_by_time/) for a pandas tutorial. 
