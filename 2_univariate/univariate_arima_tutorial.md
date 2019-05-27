@@ -64,7 +64,7 @@ x %>%
 
 `stl()` has more sophisticated set of parameters than `decompose()`, but both can broadly accomplish the same task.
 
-Armed with this information, we can now make a series of informed guesses about what our initial ARIMA(*p*,*d*,*q*) model that is most appropriate. The secondary peaks in the ACF are evidence of a seasonal, which we confirmed in the decomposed series.
+Armed with this information, we can now make a series of informed guesses about what our initial ARIMA(*p*,*d*,*q*) model that is most appropriate. The secondary peaks in the ACF are evidence of a seasonal component, which we confirmed in the decomposed series.
 
 Referring back to the archetypes of ACF/PACF functions (slides 12 + 13), the pattern in the `Airpassengers` dataset seems to closely resemble the ARMA(1,1) model. If you ignore the upticks in the ACF due to the seasonal component, the autocorrelation descends consistently over time. In addition, the PACF plot has significant autocorrelations in opposite directions, followed by oscillating, mostly insignificant correlations until we hit 12 months out, which is, agian, the seasonal component.
 
