@@ -11,7 +11,7 @@ This dataset contains the following 7 variables:
 1. date: Tidy time series data's temporal unit (daily, for 1 year)
 2. guardian: count of articles published by The Guardian using the word "brexit"
 3. timesofindia: count of articles published by Times of India using the word "brexit"
-4. german: count of articles published by German news outlets in the [MediaCloud collection](https://sources.mediacloud.org/#/collections/34412409) using the word "brxit"
+4. german: count of articles published by German news outlets in the [MediaCloud collection](https://sources.mediacloud.org/#/collections/34412409) using the word "brexit"
 5. nyt: count of articles published by The New York Times using the word "brexit"
 6. approval: public approval of Brexit
 7. event: significant Brexit events, as identified from [Wikipedia](https://en.wikipedia.org/wiki/Brexit#2019)
