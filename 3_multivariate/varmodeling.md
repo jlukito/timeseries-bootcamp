@@ -360,6 +360,7 @@ Granger causality
 =================
 
 Wikipedia: <a href="https://en.wikipedia.org/wiki/Granger_causality" class="uri" target="_blank">https://en.wikipedia.org/wiki/Granger_causality</a> 
+
 Below are examples of of two Granger causality tests. The bivariate (two-way) test can be found in the `lmtest` package (`grangertest()`), and the cumulative Granger test in the `vars` package (`causality()`).
 
 For the `grangertest()` function, your DV will be on the left, and your IV will be on the right. This test will compare whether a model predicting your IV is better with the inclusion of lagged variables of your DV (or whether the lagged variables of your IV do enough).
