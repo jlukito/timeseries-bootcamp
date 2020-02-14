@@ -21,4 +21,4 @@ Our tutorial is grouped into four topics:
 We would like to extend our thanks to the UW-Madison School of Journalism and Mass Communication for providing us with a location to run this boot camp and to all our attendees for participating. We would also like to thank Dr. Dhavan Shah, Dr. Chris Wells, and Dr. Jon Pevehouse for their support as we organized these materials.
 
 ## Questions?
-For more information, or for permission to use these materials, please contact [jlukito@wisc.edu](mailto:jlukito@wisc.edu).
+For more information, or for permission to use these materials, please contact [jlukito@wisc.edu](mailto:jlukito@wisc.edu) and/or [jfoley5@wisc.edu](jfoley5@wisc.edu).
